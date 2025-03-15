@@ -7,7 +7,7 @@ dotenv.config();
 
 import { uploadFile } from './services/uploadFileService';
 const app = express();
-const allowedOrigins = ['http://localhost:5173', 'https://713-2024-frontend.vercel.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://713-2025-frontend.vercel.app'];
 
 const options: cors.CorsOptions = {
   origin: allowedOrigins
@@ -30,3 +30,4 @@ app.post('/upload', upload.single('file'), async (req: any, res: any) => {
 
     const bucket = process.env.SUPABASE_BUCKET_NAME;
     const filePath = process.env.UPLOAD_DIR;
+    }
